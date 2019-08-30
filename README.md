@@ -19,7 +19,29 @@ The requirements for the system, as stated by the client are:
 - when saving the ingredients for a **recipe** capture the quantity required for that **ingredient** as a floating number.
 - have a way to save step by step instructions for preparing a recipe.
 
-**Hint**: Before writing any code, write out all desired tables in the data model and determine all relationships between tables. 
+**Hint**: Before writing any code, write out all desired tables in the data model and determine all relationships between tables.
+
+Tables: Recipes, Ingredients
+
+Recipes (many) <==> Ingredients (many)
+
+recipes:
+-id
+-recipe_name
+-instructions
+
+ingredients:
+-id
+-ingredient_name
+
+recipe_ingredients:
+-recipe_id
+-ingredient_id
+-quantity
+
+## intermediary table ##
+
+
 
 ### Migrations and Seeds
 
