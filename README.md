@@ -28,19 +28,25 @@ Recipes (many) <==> Ingredients (many)
 recipes:
 -id
 -recipe_name
--instructions
+
+instructions:
+-id
+-recipe_id
+
+instruction_steps:
+-id
+-instructions_id
+-step_number
+-details
 
 ingredients:
 -id
 -ingredient_name
 
-recipe_ingredients:
+recipe_ingredients: // intermediary table
 -recipe_id
 -ingredient_id
 -quantity
-
-## intermediary table ##
-
 
 
 ### Migrations and Seeds
